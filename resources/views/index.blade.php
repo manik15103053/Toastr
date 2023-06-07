@@ -45,6 +45,9 @@
             'closeButton' : true,
         }
         toastr.success("{{ Session::get('message') }}", 'Success!', {timeout: 120000});
+        toastr.info("{{ Session::get('message') }}");
+        toastr.warning("{{ Session::get('message') }}");
+        toastr.error("{{ Session::get('message') }}");
     </script>
         
     @endif
