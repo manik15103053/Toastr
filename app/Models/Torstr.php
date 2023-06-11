@@ -9,5 +9,5 @@ class Torstr extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'email', 'description'];
+    protected $fillable = ['name', 'email', 'description', 'options'];
 }

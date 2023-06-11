@@ -13,13 +13,19 @@ class ToasterController extends Controller
 
     public function store(Request $request){
 
+        // dd($request->all());
         $request->validate([
             'name' => 'required',
             'email' => 'required|email',
             'description' => 'required',
 
         ]);
-        Torstr::create($request->all());
+        $tst = new Torstr();
+        $tst->name = $request->name;
+        $tst->email = $request->email;
+        $tst->description = $request->description;
+        $tst->options = json_encode($request->options);
+        $tst->save();
         return back()->with('message', 'Post Created Successfully');
     }
 }

@@ -24,6 +24,16 @@
             <input type="email" class="form-control" id="email" name="email" required aria-describedby="emailHelp" placeholder="Enter email">
           </div>
           <div class="form-group">
+            <label for="exampleInputEmail1">Options</label>
+            <select name="options[]" id="options" class="form-control" multiple>
+              <option value="option1">Option1</option>
+              <option value="option2">Option2</option>
+              <option value="option3">Option3</option>
+              <option value="option4">Option4</option>
+              <option value="option5">Option5</option>
+            </select>
+          </div>
+          <div class="form-group">
             <label for="exampleInputEmail1">Description</label>
             <textarea name="description" id="description" cols="30" rows="2" required class="form-control"></textarea>
           </div>
